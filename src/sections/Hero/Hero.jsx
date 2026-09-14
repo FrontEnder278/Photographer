@@ -21,7 +21,7 @@ const Hero = (props) => {
                         <h1 className="hero__header-title">Damien Braun</h1>
                     </div>
                     <img className="hero__header-image hidden-tablet"
-                         src='/hero.svg'
+                         src={`${import.meta.env.BASE_URL}hero.svg`}
                          alt=""
                          width={346}
                          height={346}/>
