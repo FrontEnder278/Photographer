@@ -1,0 +1,85 @@
+.review-card {
+  display: flex;
+
+
+  @include laptop {
+    justify-content: center;
+  }
+
+
+  &__inner {
+    --border: 1px solid var(--color-black-12);
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    row-gap: fluid(30, 20);
+    padding: fluid(40, 24);
+    max-width: 512px;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+
+
+    @include laptop {
+      border-radius: var(--border-radius-m);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background:
+      linear-gradient(207deg,
+      #18181B 0%,
+      rgba(24, 24, 27, 0.00) 83.33%);
+      top: calc(100% - 340px);
+      left: calc(100% - 210px);
+      width: 60%;
+      height: 50%;
+      rotate: 220deg;
+      border-radius: 22px;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background:
+      linear-gradient(207deg,
+      #18181B 0%,
+      rgba(24, 24, 27, 0.00) 83.33%);
+      top: 25%;
+      right: 62%;
+      width: 489px;
+      height: 489px;
+      rotate: 40deg;
+      border-radius: 22px;
+      z-index: 1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__location {
+    font-size: inherit;
+    text-transform: inherit;
+  }
+
+  &__stars {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__description {
+    line-height: 1.5;
+    position: relative;
+    z-index: 10;
+  }
+}

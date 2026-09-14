@@ -1,0 +1,7 @@
+.slider-navigation {
+  display: inline-flex;
+  column-gap: fluid-to-laptop(16, 12);
+  border: var(--border);
+  border-radius: 100px;
+  padding: fluid-to-laptop(10, 8);
+}

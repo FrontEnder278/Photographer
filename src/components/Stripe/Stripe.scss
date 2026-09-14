@@ -1,0 +1,22 @@
+.stripe {
+  display: flex;
+  column-gap: fluid-to-laptop(20, 16);
+  background-color: var(--color-black-06);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  padding-block: fluid-to-laptop(20, 16);
+  overflow: hidden;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: fluid-to-laptop(10, 6);
+  }
+
+  &__name {
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+  }
+}

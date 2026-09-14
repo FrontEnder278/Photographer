@@ -1,0 +1,31 @@
+.accordion-group {
+  list-style: none;
+  gap: 0;
+
+  &--2-columns {
+    @include tablet-above {
+      column-count: 2;
+    }
+  }
+
+  &__item {
+    --border: 1px solid var(--color-black-12);
+    @include flex-center;
+    break-inside: avoid-column;
+    padding-inline: fluid-to-laptop(50, 44);
+    padding-block: fluid-to-laptop(30, 24);
+    border: var(--border);
+
+    &:nth-child(n + 5) {
+      border-left: none;
+    }
+
+    @include mobile {
+      border-inline: none;
+    }
+
+    &--last-column-item {
+      border-bottom: none;
+    }
+  }
+}

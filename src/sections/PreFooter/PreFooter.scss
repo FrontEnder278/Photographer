@@ -1,0 +1,9 @@
+.pre-footer {
+  padding-top: var(--section-padding-y);
+
+  &__inner {
+    display: flex;
+    justify-content: end;
+    margin-bottom: fluid(100, 20);
+  }
+}

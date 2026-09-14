@@ -1,0 +1,49 @@
+.media-card {
+
+  @include laptop {
+    display: flex;
+    justify-content: center;
+  }
+
+  //&__list {
+  //  display: grid;
+  //  grid-template-columns: repeat(3, 1fr);
+  //  column-gap: fluid-to-laptop(50, 30);
+  //}
+
+  &__image {
+    border-radius: var(--border-radius-sm);
+
+    @include laptop {
+      border-radius: var(--border-radius-xs);
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 19px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    display: grid;
+  }
+
+  &__title {
+    color: var(--color-gray-80);
+  }
+
+  &__date {
+    color: var(--color-gray-50);
+  }
+
+  &__link {
+    display: flex;
+    column-gap: fluid-to-laptop(10, 6);
+    color: var(--color-gray-95);
+  }
+}

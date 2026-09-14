@@ -1,0 +1,70 @@
+:root {
+  // Цвета
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --color-purple-55: #4A2CED;
+  --color-purple-60: #5E43EF;
+  --color-purple-70: #8672F3;
+  --color-purple-80: #AEA1F7;
+  --color-purple-90: #D6D0FB;
+  --color-purple-95: #EAE7FD;
+  --color-purple-97: #F3F1FE;
+  --color-purple-99: #FBFAFF;
+
+  --color-black-03: #070708;
+  --color-black-06: #0E0E10;
+  --color-black-08: #131316;
+  --color-black-12: #1C1C21;
+  --color-black-15: #232329;
+  --color-black-20: #2F2F37;
+  --color-black-25: #3B3B45;
+  --color-black-30: #474752;
+
+  --color-gray-40: #62646C;
+  --color-gray-50: #797C86;
+  --color-gray-70: #AFB0B6;
+  --color-gray-80: #CACACE;
+  --color-gray-90: #E4E4E6;
+  --color-gray-95: #F2F2F3;
+  --color-gray-97: #F7F7F8;
+  --color-gray-99: #FCFCFD;
+
+  // Рамки и скругления
+
+  --border-gradient: linear-gradient(
+   90deg,
+   var(--color-black-20) 28%,
+   rgba(47, 47, 55, 0) 100%);
+
+  --border-radius-sm: 20px;
+  --border-radius-xs: 16px;
+  --border-radius-s: 12px;
+  --border-radius-m: 10px;
+  --border-radius-l: 8px;
+
+  --border: 1px solid var(--color-black-25);
+
+  // Тени
+
+  --box-shadow: inset 4px 4px 17px 0 rgba(255, 255, 255, 0.28);
+
+  // Шрифт
+
+  --font-family-base: 'Manrope', sans-serif;
+
+  // Контейнер
+
+  --container-width: #{fluid-to-laptop(
+  $container-desktop-width,
+  $container-laptop-width)
+  };
+
+  --container-padding-x: 16px;
+
+  --section-padding-y: #{fluid(100, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

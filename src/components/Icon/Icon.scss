@@ -1,0 +1,31 @@
+.icon {
+  --iconSize: 30px;
+  @include square(var(--iconSize));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 100%;
+  }
+
+  &--purple {
+    color: var(--color-purple-80);
+  }
+
+  &--arrow-right-top {
+    --iconSize: 24px;
+  }
+
+  &--star {
+    --color-yellow: #ffce22;
+    --iconSize: 24px;
+
+    color: var(--color-yellow);
+
+    @include laptop {
+      --iconSize: 20px;
+    }
+  }
+}
+

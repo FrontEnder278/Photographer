@@ -1,0 +1,33 @@
+.soc1als {
+  display: flex;
+  column-gap: fluid-to-laptop(10, 8);
+  padding: fluid-to-laptop(10, 8);
+  width: fluid-to-laptop(184, 146);
+  height: fluid-to-laptop(68, 54);
+  background-color: var(--color-black-03);
+  border-radius: 100px;
+  border: var(--border);
+
+  &__button {
+    @include square(fluid-to-laptop(48, 38));
+    border-radius: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: fluid-to-laptop(14, 10);
+
+    .icon {
+
+      align-items: center;
+      svg {
+        --iconSize: 20px;
+
+        @include square(var(--iconSize));
+
+        @include laptop {
+          --iconSize: 18px;
+        }
+      }
+    }
+  }
+}

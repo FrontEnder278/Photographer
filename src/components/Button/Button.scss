@@ -1,0 +1,44 @@
+.button {
+  display: inline-flex;
+  column-gap: 4px;
+  padding: fluid(18, 14) fluid(24, 20);
+  background-color: var(--color-black-12);
+  color: var(--color-white);
+  font-weight: 500;
+  border: 2px solid transparent;
+  background:
+  linear-gradient(var(--color-black-12), var(--color-black-12)) padding-box,
+  linear-gradient(100deg,
+  var(--color-black-20) 78%,
+  transparent) border-box;
+  border-radius: var(--border-radius-l);
+  user-select: none;
+  text-transform: none;
+  align-items: center;
+
+  @include hover {
+    background: var(--color-white);
+    color: var(--color-black);
+  }
+
+  &--arrow {
+    @include flex-center;
+    width: fluid(130, 80);
+    height: fluid(66, 48);
+    background: var(--color-purple-55);
+    border-radius: 100px;
+    box-shadow: var(--box-shadow);
+  }
+
+  &--slider {
+   @include square(fluid-to-laptop(62, 48));
+   @include flex-center;
+   border-radius: 100px;
+  }
+
+  &:disabled {
+    color: var(--color-black-30);
+    background-color: var(--color-black-03);
+    pointer-events: none;
+  }
+}

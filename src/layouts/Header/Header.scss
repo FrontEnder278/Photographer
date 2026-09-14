@@ -1,0 +1,120 @@
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  border-bottom: var(--border);
+  animation-name: scrolling-header;
+  animation-timeline: scroll();
+  animation-fill-mode: both;
+  animation-range: 0 100px;
+  padding-inline: fluid-to-laptop(125, 62);
+
+  @keyframes scrolling-header {
+    to {
+      background-color: var(--color-black-15);
+      border-color: var(--color-black-15);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding-top: fluid(30, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    border-right: var(--border);
+    border-left: var(--border);
+    padding-inline: fluid-to-laptop(40, 18);
+
+    @include tablet {
+      padding-block: 40px;
+    }
+  }
+
+  &__overlay-menu {
+    @include tablet-above {
+      display: contents;
+    }
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-black-25);
+    width: 100%;
+    height: 100%;
+    row-gap: 40px;
+
+    &[open] {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__menu {
+    border-left: var(--border);
+    border-right: var(--border);
+    border-top: var(--border);
+    border-radius:
+    var(--border-radius-s)
+    var(--border-radius-s)
+    0 0;
+    overflow: hidden;
+
+    @include tablet {
+      border: none;
+      overflow: visible;
+    }
+
+    &-list {
+      display: flex;
+
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+
+    &-item {
+      &:not(:last-child) {
+        border-right: var(--border);
+
+        @include tablet {
+          border-right: none;
+
+        }
+      }
+    }
+
+    &-link {
+      padding-block: fluid-to-laptop(30, 24);
+      padding-inline: fluid-to-laptop(40, 30);
+
+
+      &.is-active {
+        color: var(--color-white);
+        background-color: var(--color-black-08);
+        padding-inline: fluid-to-laptop(50, 40);
+        pointer-events: none;
+
+        @include tablet {
+          border-radius: var(--border-radius-s);
+        }
+      }
+
+      @include hover {
+        background-color: var(--color-gray-95);
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &__burger-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
