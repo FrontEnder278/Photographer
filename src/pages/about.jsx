@@ -1,3 +1,9 @@
+import About from "@/sections/About";
+import Timeline from "@/sections/Timline";
+import Reviews from "@/sections/Reviews";
+import PreFooter from "@/sections/PreFooter";
+
+
 export const metadata = {
     title: 'About Me',
 }
@@ -5,7 +11,10 @@ export const metadata = {
 export default function () {
     return (
         <>
-            <h1>Обо мне</h1>
+            <About/>
+            <Timeline/>
+            <Reviews/>
+            <PreFooter/>
         </>
     )
 }

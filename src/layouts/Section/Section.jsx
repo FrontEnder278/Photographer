@@ -28,7 +28,7 @@ const Section = (props) => {
                 })}>
                     <div className="section__header-info">
                     {subtitle && (
-                        <span className="section__subtitle">
+                        <span className="section__subtitle h5">
                             {subtitle}
                         </span>
                     )}

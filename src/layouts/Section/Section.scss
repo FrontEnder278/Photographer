@@ -24,6 +24,10 @@
     text-transform: uppercase;
   }
 
+  &__subtitle {
+    color: var(--color-gray-50);
+  }
+
   &__actions {
     &-wrapper {
       display: flex;

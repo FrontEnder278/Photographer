@@ -1,0 +1,21 @@
+.statistic-card {
+  border-radius: var(--border-radius-s);
+  border: var(--border);
+  background-color: var(--color-black-06);
+  width: fluid(248, 173);
+
+  &__inner {
+    padding-block: fluid-to-laptop(24, 20);
+    padding-inline: fluid-to-laptop(30, 14);
+    text-align: center;
+  }
+
+  &__title {
+    @include fluid-text(48, 24);
+    color: var(--color-white);
+  }
+
+  &__description {
+    white-space: nowrap;
+  }
+}

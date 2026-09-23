@@ -1,0 +1,179 @@
+.timeline-card {
+  position: relative;
+  overflow: hidden;
+  padding: fluid(50, 24);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: fluid(20, 10);
+  border: var(--border);
+  border-radius: var(--border-radius-s);
+  background-color: var(--color-black-06);
+  z-index: 10;
+
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  z-index: -1;
+  //  bottom: -180px;
+  //  left: 0px;
+  //  width: 220px;
+  //  height: 420px;
+  //  border-radius: 22px;
+  //  transform: rotate(125.344deg) scaleX(-1);
+  //  background: linear-gradient(207deg, #18181B 0%, rgba(24, 24, 27, 0.00) 83.33%);
+  //}
+  //
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  z-index: -1;
+  //  top: 0;
+  //  right: -80px;
+  //  width: 420px;
+  //  height: 200px;
+  //  border-radius: 22px;
+  //  transform: rotate(-144.529deg);
+  //  background: linear-gradient(207deg, #18181B 0%, rgba(24, 24, 27, 0.00) 83.33%);
+  //}
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -75%;
+    left: -10%;
+    /* Размеры адаптируются под ширину карточки, а не зафиксированы */
+    width: 40%;
+    height: 140%;
+    border-radius: 22px;
+    transform: rotate(125deg) scaleX(-1);
+    background: linear-gradient(207deg, #18181B 0%, rgba(24, 24, 27, 0.00) 83.33%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -84%;
+    right: -45%;
+    width: 80%;
+    height: 180%;
+    border-radius: 22px;
+    transform: rotate(-145deg);
+    background: linear-gradient(207deg, #18181B 0%, rgba(24, 24, 27, 0.00) 83.33%);
+    pointer-events: none;
+  }
+
+  @include mobile-s {
+  &::before {
+          width: 180px;
+          height: 340px;
+          left: -70px;
+          bottom: -130px;
+          border-radius: 22px;
+        }
+
+        &::after {
+          width: 250px;
+          height: 200px;
+          right: -40%;
+          top: -40%;
+          border-radius: 22px;
+        }
+  }
+  @include laptop {
+    border-radius: var(--border-radius-m);
+  }
+
+  &__title,
+  &__description {
+    color: var(--color-gray-50);
+  }
+}
+//.timeline-card {
+//  position: relative;
+//  overflow: hidden;
+//  padding: fluid(50, 24);
+//  display: flex;
+//  flex-direction: column;
+//  align-items: start;
+//  row-gap: fluid(20, 10);
+//  border: var(--border);
+//  border-radius: var(--border-radius-s);
+//  background-color: var(--color-black-06);
+//  z-index: 0;
+//
+//  &::before {
+//    content: "";
+//    position: absolute;
+//    z-index: -1;
+//
+//    width: 220px;
+//    height: 420px;
+//
+//    left: -100px;
+//    bottom: -170px;
+//
+//    border-radius: 22px;
+//    transform: rotate(125deg) scaleX(-1);
+//
+//    background: linear-gradient(
+//            207deg,
+//            #18181B 0%,
+//            rgba(24, 24, 27, 0) 83.33%
+//    );
+//  }
+//
+//  &::after {
+//    content: "";
+//    position: absolute;
+//    z-index: -1;
+//
+//    width: 420px;
+//    height: 200px;
+//
+//    right: -180px;
+//    top: -100px;
+//
+//    border-radius: 22px;
+//    transform: rotate(-145deg);
+//
+//    background: linear-gradient(
+//            207deg,
+//            #18181B 0%,
+//            rgba(24, 24, 27, 0) 83.33%
+//    );
+//  }
+//
+//  // МОБИЛКА
+//  @include mobile {
+//    &::before {
+//      width: 180px;
+//      height: 340px;
+//      left: -70px;
+//      bottom: -130px;
+//      border-radius: 22px;
+//    }
+//
+//    &::after {
+//      width: 300px;
+//      height: 150px;
+//      right: -110px;
+//      top: -55px;
+//      border-radius: 22px;
+//    }
+//  }
+//
+//  @include laptop {
+//    border-radius: var(--border-radius-m);
+//  }
+//
+//  &__title,
+//  &__description {
+//    position: relative;
+//    z-index: 1;
+//    color: var(--color-gray-50);
+//  }
+//}
