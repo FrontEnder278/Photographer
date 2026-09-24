@@ -13,19 +13,19 @@ const Header = (props) => {
     const menuItems = [
         {
             link: 'Home',
-            href: '/',
+            href: '/Photographer/',
         },
         {
             link: 'About Me',
-            href: '/about',
+            href: '/Photographer/about.html',
         },
         {
             link: 'Portfolio',
-            href: '/portfolio',
+            href: '/Photographer/portfolio.html',
         },
         {
             link: 'Services',
-            href: '/services',
+            href: '/Photographer/services.html',
         },
     ]
 
