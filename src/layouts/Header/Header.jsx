@@ -7,7 +7,7 @@ import BurgerButton from "@/components/BurgerButton";
 const Header = (props) => {
 
     const {
-        url
+        url,
     } = props
 
     const menuItems = [
@@ -29,6 +29,13 @@ const Header = (props) => {
         },
     ]
 
+    const normalizePath = (path = '') => path
+        .replace(/^\/Photographer(?=\/|$)/, '')
+        .replace(/\.html$/, '')
+        .replace(/\/$/, '') || '/'
+
+    const currentPath = normalizePath(url)
+
     return (
         <header
             className="header"
@@ -46,7 +53,7 @@ const Header = (props) => {
                                 <li className='header__menu-item' key={index}>
                                     <a
                                         className={classNames('header__menu-link', {
-                                            'is-active': href === url
+                                            'is-active': currentPath === normalizePath(href)
                                         })}
                                         href={href}
                                     >
@@ -62,7 +69,6 @@ const Header = (props) => {
                             label='Contact Me'
                             href='/contact'
                         />
-
                     </div>
                 </dialog>
                 <BurgerButton

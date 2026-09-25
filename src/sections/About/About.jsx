@@ -2,7 +2,6 @@ import './About.scss'
 import classNames from 'classnames'
 import { Image } from 'minista'
 import StatisticCard from "@/sections/About/components/StatisticCard";
-import Icon from "@/components/Icon";
 
 const About = (props) => {
 
@@ -72,6 +71,10 @@ const About = (props) => {
                     />
                     <span className='about__body-text hidden-tablet'>Scroll Down To See My Journey</span>
                     </div>
+                    <Image
+                        className='about__image-decor hidden-tablet'
+                        src='/src/assets/images/about/about-2.png'
+                    />
                     <Image
                         className='about__image-2 hidden-tablet'
                         src='/src/assets/images/about/about-3.png'
