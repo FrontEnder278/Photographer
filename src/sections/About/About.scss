@@ -65,16 +65,8 @@
     align-items: end;
     justify-content: center;
 
-    .about__image-decor {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-    }
-
     &-icon {
+      position: absolute;
       @include square(fluid-to-laptop(137, 100));
       left: 0;
       bottom: 5px;

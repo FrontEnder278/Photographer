@@ -64,17 +64,12 @@ const About = (props) => {
                 </ul>
                 <div className="about__body">
                     <div className="about__body-wrapper">
-                    <img className='about__body-icon hidden-tablet'
-                         src='/src/assets/images/about/about-icon.png'
-                         width={137}
-                         height={137}
+                    <Image
+                        className='about__body-icon hidden-tablet'
+                        src='/src/assets/images/about/about-icon.png'
                     />
                     <span className='about__body-text hidden-tablet'>Scroll Down To See My Journey</span>
                     </div>
-                    <Image
-                        className='about__image-decor hidden-tablet'
-                        src='/src/assets/images/about/about-2.png'
-                    />
                     <Image
                         className='about__image-2 hidden-tablet'
                         src='/src/assets/images/about/about-3.png'
