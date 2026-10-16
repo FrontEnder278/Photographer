@@ -1,7 +1,7 @@
 import './ServiceCollection.scss'
 import classNames from 'classnames'
 import Slider from "@/components/Slider";
-import {Image} from "minista";
+import {Picture} from "minista";
 import SliderNavigation from "@/components/SliderNavigation";
 import Icon from "@/components/Icon";
 
@@ -35,15 +35,15 @@ const ServiceCollection = (props) => {
                         const tablet = typeof image === 'string' ? null : image.tablet
 
                         return (
-                            <picture key={index}>
-                                {tablet && (
-                                    <source
-                                        media="(max-width: 480px)"
-                                        srcSet={tablet}
-                                    />
-                                )}
-                                <Image src={desktop} alt="" />
-                            </picture>
+                            <Picture
+                                key={index}
+                                src={desktop}
+                                alt=""
+                                artDirectives={tablet ? [{
+                                    media: '(max-width: 480px)',
+                                    src: tablet,
+                                }] : []}
+                            />
                         )
                     })}
                 </Slider>
