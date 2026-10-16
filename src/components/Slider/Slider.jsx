@@ -13,12 +13,13 @@ const defaultSliderParams = {
 const Slider = (props) => {
     const {
         children,
+        className,
         navigationTargetElementId = null,
         sliderParams = defaultSliderParams,
     } = props
 
     return (
-        <div className="slider container" data-js-slider={JSON.stringify({
+        <div className={classNames('slider container', className)} data-js-slider={JSON.stringify({
             sliderParams,
             navigationTargetElementId,
         })}>
@@ -32,7 +33,7 @@ const Slider = (props) => {
                 </ul>
                 <SliderNavigation
                     className="slider__navigation"
-                    isVisibleNavigationOnTablet
+                    isVisibleNavigationOnTablet={Boolean(navigationTargetElementId)}
                     data-js-slider-navigation=''
                 />
             </div>

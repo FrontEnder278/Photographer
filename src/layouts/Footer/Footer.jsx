@@ -1,8 +1,10 @@
 import './Footer.scss'
 import Button from "@/components/Button";
 import Socials from "@/components/Socials";
+import getPageHref from '@/utils/getPageHref'
 
 const Footer = () => {
+
 
     const menuItems = [
         {
@@ -33,7 +35,7 @@ const Footer = () => {
                     <div className="footer__collab">
                         <span className='footer__subtitle'>A more meaningful home for photography</span>
                         <h2 className="footer__title">
-                        <a className="hero__header-link" href="/">
+                        <a className="hero__header-link" href={getPageHref()}>
                             <span className='hero__header-span h2'>Let's</span>
                             <Button
                                 className='hero__header-button'
@@ -50,14 +52,14 @@ const Footer = () => {
                     <nav className="footer__menu">
                             {menuItems.map(({title, links}, index) => (
                                 <div className="footer__menu-column" key={index}>
-                                <a className='footer__menu-title' href='/'>
+                                <a className='footer__menu-title' href={getPageHref()}>
                                     {title}
                                 </a>
                                 <ul className="footer__menu-list">
                                     {links?.map((link , index) => (
                                         <li className='footer__menu-item' key={index}>
                                             <a className="footer__menu-link"
-                                               href="/"
+                                               href={getPageHref()}
                                             >
                                               {link}
                                             </a>
@@ -72,7 +74,7 @@ const Footer = () => {
                     <div className="footer__extra-info">
                         {extraLinks.map((link, index) => (
                             <a className='footer__extra-link'
-                               href='/'
+                               href={getPageHref()}
                                key={index}
                             >
                                 {link}

@@ -59,12 +59,15 @@ h5, .h5 {
 
 a,
 button,
-label,
-input,
-textarea,
 select,
 svg * {
     transition-duration: var(--transition-duration);
+}
+
+label,
+input,
+textarea {
+  transition-duration: var(--transition-duration-longer);
 }
 
 .button__label {
@@ -88,7 +91,16 @@ span {
   text-transform: uppercase;
 }
 
-:focus-visible {
-  @include focus-visible;
+:focus {
+  outline: none;
 }
+
+.is-keyboard-navigation :focus {
+  @include focus-visible;
+} // при навигации с клавитатуры браузер
+// добавляет правило
+
+//* {
+//     outline: 16px solid green !important;
+//  }
 

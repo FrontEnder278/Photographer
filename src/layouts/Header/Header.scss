@@ -27,9 +27,20 @@
     border-right: var(--border);
     border-left: var(--border);
     padding-inline: fluid-to-laptop(40, 18);
+    animation-name: compact-header-inner;
+    animation-timeline: scroll();
+    animation-fill-mode: both;
+    animation-range: 0 100px;
 
     @include tablet {
       padding-block: 40px;
+    }
+  }
+
+  @keyframes compact-header-inner {
+    to {
+      padding-block: 30px;
+
     }
   }
 

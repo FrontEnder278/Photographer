@@ -25,6 +25,7 @@ const Section = (props) => {
         >
                 <div className={classNames('section__header', {
                     [`section__header--${column}`]: column,
+
                 })}>
                     <div className="section__header-info">
                     {subtitle && (

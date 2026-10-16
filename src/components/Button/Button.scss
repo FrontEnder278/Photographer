@@ -30,6 +30,7 @@
     box-shadow: var(--box-shadow);
   }
 
+
   &--slider {
    @include square(fluid-to-laptop(62, 48));
    @include flex-center;

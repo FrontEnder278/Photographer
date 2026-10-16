@@ -13,6 +13,10 @@
 
   &__image {
     border-radius: var(--border-radius-sm);
+    border: none;
+    height: auto;
+
+    width: 100%;
 
     @include laptop {
       border-radius: var(--border-radius-xs);
@@ -22,6 +26,7 @@
   &__content {
     display: grid;
     gap: 19px;
+    width: 100%;
   }
 
   &__body {

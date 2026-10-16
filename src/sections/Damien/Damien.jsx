@@ -4,8 +4,10 @@ import Button from "@/components/Button";
 import {Image} from "minista";
 import Icon from "@/components/Icon";
 import Socials from "@/components/Socials";
+import getPageHref from '@/utils/getPageHref'
 
 const Damien = () => {
+
 
 
     const itemContact = [
@@ -29,7 +31,7 @@ const Damien = () => {
             subtitle='about'
             actions={(
                 <Button
-                    href='/about'
+                    href={getPageHref('about')}
                     label='Know More'
                     iconName='arrow-right'
                     iconPosition='after'

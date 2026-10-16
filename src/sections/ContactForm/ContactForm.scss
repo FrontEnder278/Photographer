@@ -1,0 +1,62 @@
+.contact-form {
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: fluid(80, 40);
+    padding-block: fluid(80, 40);
+    border-bottom: var(--border);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__info,
+  &__message {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(30, 14);
+    max-width: 535px;
+
+    &-title {
+      color: var(--color-gray-50);
+      text-transform: uppercase;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: fluid(50, 20);
+    flex-wrap: nowrap;
+
+    @include tablet-above {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__tel,
+  &__email {
+    color: var(--color-white);
+    column-gap: fluid-to-laptop(10, 6);
+  }
+
+  &__body {
+    padding-block: fluid(80, 40);
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+
+}

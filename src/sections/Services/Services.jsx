@@ -5,6 +5,7 @@ import Slider from "@/components/Slider";
 import serviceItems from "@/sections/Services/serviceItems";
 import ServiceCard from "@/sections/Services/ServiceCard";
 import SliderNavigation from "@/components/SliderNavigation";
+import getPageHref from '@/utils/getPageHref'
 
 
 const Services = () => {
@@ -27,7 +28,7 @@ const Services = () => {
                 />
                 <Button
                     label='View All Services'
-                    href='/services'
+                    href={getPageHref('services')}
                     iconPosition='after'
                     iconName='arrow-right'
                 />

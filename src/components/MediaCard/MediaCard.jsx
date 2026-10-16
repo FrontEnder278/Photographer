@@ -1,6 +1,7 @@
 import './MediaCard.scss'
 import { Image } from 'minista'
 import Icon from "@/components/Icon";
+import getPageHref from '@/utils/getPageHref'
 
 const MediaCard = (props) => {
     const {
@@ -8,6 +9,7 @@ const MediaCard = (props) => {
         title,
         date,
     } = props
+
 
     return (
         <div className="media-card">
@@ -29,7 +31,7 @@ const MediaCard = (props) => {
                         </p>
                     </div>
 
-                    <a className="media-card__link" href="/">
+                    <a className="media-card__link" href={getPageHref('portfolio')}>
                         <span>View Project</span>
 
                         <Icon

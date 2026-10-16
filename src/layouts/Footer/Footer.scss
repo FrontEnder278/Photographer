@@ -1,7 +1,6 @@
 .footer {
 
   &__body {
-
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -88,6 +87,10 @@
       border-bottom: var(--border);
       border-color: var(--color-black-25);
       color: var(--color-white);
+
+      @include hover {
+        border-color: var(--color-white);
+      }
 
       @include laptop {
         font-size: 14px;

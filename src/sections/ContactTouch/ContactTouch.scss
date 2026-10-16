@@ -1,0 +1,81 @@
+.contact-touch {
+  padding-block: var(--section-padding-y);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: min(
+    var(--container-width),
+    calc(100% - var(--container-padding-x) - var(--container-padding-x))
+    );
+    translate: -50%;
+    background-color: var(--color-black-25);
+    bottom: 0;
+    left: 50%;
+  }
+
+  &__inner {
+    height: fluid-to-laptop(764, 632);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet-above {
+      background: url("@/assets/images/contact-touch/bg.png") center/cover no-repeat;
+      align-items: start;
+    }
+
+    @include tablet {
+      height: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__soc1als {
+    @include tablet-above {
+      margin-top: 104px;
+      margin-left: auto;
+    }
+
+    @include tablet {
+      margin-top: -40px;
+    }
+
+    @include mobile {
+      margin-top: -20px;
+    }
+    display: flex;
+  }
+
+  &__header {
+    padding-top: fluid-to-laptop(48, 28);
+    width: fluid(1096, 357);
+  }
+
+  &__subtitle {
+    @include fluid-text(22, 14);
+  }
+
+  &__title {
+    text-transform: uppercase;
+
+    @include tablet {
+      padding-bottom: 24px;
+    }
+  }
+
+  &__hint {
+    max-width: 205px;
+    padding-top: fluid-to-laptop(250, 200);
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+}

@@ -15,9 +15,15 @@
     padding-inline: fluid-to-laptop(50, 44);
     padding-block: fluid-to-laptop(30, 24);
     border: var(--border);
+    border-bottom: none;
+
+    &:nth-child(-n + 4) {
+      border-left: none;
+    }
 
     &:nth-child(n + 5) {
       border-left: none;
+      border-right: none;
     }
 
     @include mobile {

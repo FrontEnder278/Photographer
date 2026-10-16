@@ -3,12 +3,15 @@ import classNames from 'classnames'
 import Icon from "@/components/Icon";
 import Button from "@/components/Button";
 import Stripe from "@/components/Stripe";
+import getPageHref from '@/utils/getPageHref'
+import getPublicAssetUrl from '@/utils/getPublicAssetUrl'
 
 const Hero = (props) => {
 
     const {
         className,
     } = props
+
 
     return (
         <section
@@ -21,11 +24,11 @@ const Hero = (props) => {
                         <h1 className="hero__header-title">Damien Braun</h1>
                     </div>
                     <img className="hero__header-image hidden-tablet"
-                         src={`${import.meta.env.BASE_URL}hero.svg`}
+                         src={getPublicAssetUrl('hero.svg')}
                          alt=""
                          width={346}
                          height={346}/>
-                    <a className="hero__header-link" href="/">
+                    <a className="hero__header-link" href={getPageHref()}>
                         <span className='hero__header-span h2'>Let's</span>
                         <Button
                             className='hero__header-button'

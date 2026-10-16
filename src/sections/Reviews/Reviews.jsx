@@ -5,11 +5,13 @@ import SliderNavigation from "@/components/SliderNavigation";
 import Button from "@/components/Button";
 import ReviewCard from "@/components/ReviewCard";
 import Slider from "@/components/Slider";
+import getPageHref from '@/utils/getPageHref'
 
 const Reviews = (props) => {
     const {
         className,
     } = props
+
 
     const sliderNavigationId = 'reviews-slider-navigation'
 
@@ -75,7 +77,7 @@ const Reviews = (props) => {
                     />
                     <Button
                         label='View All Works'
-                        href='/'
+                        href={getPageHref('portfolio')}
                         iconPosition='after'
                         iconName='arrow-right'
                     />

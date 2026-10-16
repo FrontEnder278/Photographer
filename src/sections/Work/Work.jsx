@@ -5,6 +5,7 @@ import SliderNavigation from "@/components/SliderNavigation";
 import Button from "@/components/Button";
 import MediaCard from "@/components/MediaCard";
 import Slider from "@/components/Slider";
+import getPageHref from '@/utils/getPageHref'
 
 const Work = (props) => {
     const {
@@ -75,7 +76,7 @@ const Work = (props) => {
                />
                    <Button
                        label='View All Works'
-                       href='/'
+                       href={getPageHref('portfolio')}
                        iconPosition='after'
                        iconName='arrow-right'
                    />

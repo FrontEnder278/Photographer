@@ -1,5 +1,7 @@
 import './Logo.scss'
 import classNames from 'classnames'
+import getPageHref from '@/utils/getPageHref'
+import getPublicAssetUrl from '@/utils/getPublicAssetUrl'
 
 const Logo = (props) => {
     const {
@@ -11,13 +13,13 @@ const Logo = (props) => {
     return (
         <a
             className={classNames(className, 'logo')}
-            href='/'
+            href={getPageHref()}
             title={title}
             aria-label={title}
         >
             <img
                 className='logo__image'
-                src={`${import.meta.env.BASE_URL}logo.svg`}
+                src={getPublicAssetUrl('logo.svg')}
                 alt=""
                 width={135}
                 height={27}

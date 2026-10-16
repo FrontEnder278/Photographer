@@ -3,6 +3,7 @@ import Logo from "@/components/Logo";
 import classNames from "classnames";
 import Button from "@/components/Button";
 import BurgerButton from "@/components/BurgerButton";
+import getPageHref from '@/utils/getPageHref'
 
 const Header = (props) => {
 
@@ -13,19 +14,19 @@ const Header = (props) => {
     const menuItems = [
         {
             link: 'Home',
-            href: '/Photographer/',
+            href: getPageHref(),
         },
         {
             link: 'About Me',
-            href: '/Photographer/about.html',
+            href: getPageHref('about'),
         },
         {
             link: 'Portfolio',
-            href: '/Photographer/portfolio.html',
+            href: getPageHref('portfolio'),
         },
         {
             link: 'Services',
-            href: '/Photographer/services.html',
+            href: getPageHref('services'),
         },
     ]
 
@@ -67,7 +68,7 @@ const Header = (props) => {
                         <Button
                             classname='header__button'
                             label='Contact Me'
-                            href='/contact'
+                            href={getPageHref('contact')}
                         />
                     </div>
                 </dialog>

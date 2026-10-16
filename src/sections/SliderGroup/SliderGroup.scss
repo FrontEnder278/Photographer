@@ -1,0 +1,31 @@
+.slider-group {
+  .section {
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        inset-inline: var(--container-padding-x);
+        border-bottom: var(--border);
+      }
+    }
+
+    &__header {
+      align-items: start;
+      border-bottom: none;
+
+    }
+
+    &__title {
+      @include fluid-text(44, 28);
+
+      color: var(--color-gray-50);
+    }
+
+    &__body {
+      padding-top: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.photography {
+  padding-block: var(--section-padding-y);
+
+  &__inner {
+    display: grid;
+    row-gap: fluid(80, 40);
+    padding-bottom: fluid(150, 80);
+    border-bottom: var(--border);
+  }
+
+  &__header {
+    position: relative;
+    @include tablet-above {
+      background-image: url("../../assets/images/services/bg-services.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 784px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: min(100%, 1296px);
+  }
+
+  &__subtitle {
+    color: var(--color-gray-50);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding-bottom: fluid-to-laptop(31, 24);
+  }
+
+  &__image {
+    border-radius: 14px;
+    width: 100%;
+  }
+
+  &__icon {
+    @include square(fluid-to-laptop(137, 80));
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__text {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    max-width: 200px;
+    font-weight: 500;
+  }
+}

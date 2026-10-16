@@ -1,3 +1,7 @@
+import Portfolio from "@/sections/Portfolio";
+import SliderGroup from "@/sections/SliderGroup";
+import FAQ from "@/sections/FAQ";
+import Reviews from "@/sections/Reviews";
 
 
 export const metadata = {
@@ -6,6 +10,11 @@ export const metadata = {
 
 export default function () {
     return (
-        <h1>Portfolio</h1>
+        <>
+        <Portfolio/>
+        <SliderGroup/>
+        <FAQ/>
+        <Reviews/>
+        </>
     )
 }

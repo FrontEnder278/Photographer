@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import { Image } from "minista";
 import SliderNavigation from "@/components/SliderNavigation";
+import getPageHref from '@/utils/getPageHref'
 
 const ServiceCard = (props) => {
     const {
@@ -11,12 +12,13 @@ const ServiceCard = (props) => {
         highlightsItems,
     } = props
 
+
     return (
         <div className="service-card service-card__inner">
 
             <div className="service-card__content">
 
-                <a href="/" className="service-card__link">
+                <a href={getPageHref('services')} className="service-card__link">
                     <h3 className="service-card__text hero__header-link">
                         {title}
                     </h3>
